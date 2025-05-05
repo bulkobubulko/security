@@ -25,7 +25,7 @@ The above steps were from lab 1, alpline-lab5 is specific for this paricular lab
 - Mikrotik CHR ip -- 192.168.64.16
 - alpline-lab5 ip -- 10.42.3.100 (since i am doing this lab on macos)
 
-First we open `192.168.64.16` in or browser, and we should see two interfaces booth:
+First we open `192.168.64.16` in or browser, and we should see two interfaces:
 
 ![img-2](data/img-2.png)
 
