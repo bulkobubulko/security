@@ -1,0 +1,23 @@
+[admin@MikroTik] > export compact 
+# may/04/2025 19:02:08 by RouterOS 6.41.3
+# software id = 
+#
+#
+#
+/interface list
+add name=WAN
+add name=LAN
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/dude
+set enabled=yes
+/interface list member
+add interface=ether1 list=WAN
+add interface=ether2 list=LAN
+/ip address
+add address=10.42.3.254/24 interface=ether2 network=10.42.3.0
+/ip dhcp-client
+add dhcp-options=hostname,clientid disabled=no interface=ether1
+/ip firewall nat
+add action=masquerade chain=srcnat out-interface-list=WAN
+[admin@MikroTik] >  
